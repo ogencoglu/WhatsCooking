@@ -1,0 +1,4 @@
+numpy==1.9.2
+keras==0.2.0
+nltk==3.0.3
+scikit-learn==0.17
