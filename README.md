@@ -3,9 +3,9 @@
 What's Cooking
 =======
 
-This is the 20th place (out of 1450 teams) solution to the Kaggle machine learning competition What's Cooking [https://www.kaggle.com/c/whats-cooking) .
+This is the 20th place (out of 1450 teams) solution to the Kaggle machine learning competition What's Cooking: https://www.kaggle.com/c/whats-cooking 
 
-It employs a fairly simple neural network classifier, giving a classification accuracy of around 81.818% [https://www.kaggle.com/c/whats-cooking/leaderboard) .
+It employs a fairly simple neural network classifier, giving a classification accuracy of around 81.818% : https://www.kaggle.com/c/whats-cooking/leaderboard
 
 Code is tested to work with Python 2.7 under Ubuntu 14.04 with GeForce GT 755M (cuDNN v2 was employed as well).
 
