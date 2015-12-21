@@ -1,7 +1,7 @@
 '''
 Author         : Oguzhan Gencoglu
 Contact        : oguzhan.gencoglu@topdatascience.com, oguzhan.gencoglu@tut.fi
-Description    : 20th Place (out of 1420) Submission for Kaggle What's Cooking Competition
+Description    : 21st Place (out of 1416) Submission for Kaggle What's Cooking Competition
 '''
 
 from __future__ import absolute_import

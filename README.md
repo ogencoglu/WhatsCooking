@@ -3,7 +3,7 @@
 What's Cooking
 =======
 
-This is the 20th place (out of 1450 teams) solution to the Kaggle machine learning competition What's Cooking: https://www.kaggle.com/c/whats-cooking 
+This is the 21st place (out of 1416 teams) solution to the Kaggle machine learning competition What's Cooking: https://www.kaggle.com/c/whats-cooking 
 
 It employs a fairly simple neural network classifier, giving a classification accuracy of around 81.818% : https://www.kaggle.com/c/whats-cooking/leaderboard
 
