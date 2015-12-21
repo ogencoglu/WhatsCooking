@@ -25,7 +25,7 @@ Further Performance Improvement Possibilities
 
 Many things were not tried so there is room for performance improvement. Couple of ideas:
 - Advanced text processing features, *e.g., tf-idf*
-- Mapping certain words to eachother with normalized Levenstein distance, *e.g. mayonnais and mayonnaise*
+- Mapping certain words to eachother with normalized Levenstein distance, *e.g. mayonnais & mayonnaise*
 - Hyperparameter optimization of the neural network *e.g. number of layers, number of units, activations, batch_size, regularization etc.*
 
 
