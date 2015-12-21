@@ -156,6 +156,20 @@ def extract_feats(ingredients, uniques):
                 feats_each[i, new_uniques.index(k)] = 1
             
     return np.hstack((feats_whole, feats_each)).astype(bool)
+    
+    
+def load_model():
+    # load neural net model architectiure
+    
+    mdl = Sequential()
+    mdl.add(Dense(512, init='glorot_uniform', activation='relu', input_shape=(train_feats.shape[1],)))
+    mdl.add(Dropout(0.5))
+    mdl.add(Dense(128, init='glorot_uniform', activation='relu'))
+    mdl.add(Dropout(0.5))
+    mdl.add(Dense(20, activation='softmax'))
+    mdl.compile(loss='categorical_crossentropy', optimizer='adadelta')
+    
+    return mdl    
 
     
 if __name__ == '__main__':
@@ -195,13 +209,7 @@ if __name__ == '__main__':
     n_ensemble = 10
     for ens in range(n_ensemble):
         print("\n\tTraining...", ens)
-        model = Sequential()
-        model.add(Dense(512, init='glorot_uniform', activation='relu', input_shape=(train_feats.shape[1],)))
-        model.add(Dropout(0.5))
-        model.add(Dense(128, init='glorot_uniform', activation='relu'))
-        model.add(Dropout(0.5))
-        model.add(Dense(20, activation='softmax'))
-        model.compile(loss='categorical_crossentropy', optimizer='adadelta')
+        model = load_model()
         
         # if model already exists, continue training
         model_name = 'model' + str(ens) + '.hdf5'
@@ -215,13 +223,7 @@ if __name__ == '__main__':
     preds = []
     for ens in range(n_ensemble):
         print("\nSubmission", ens)
-        model = Sequential()
-        model.add(Dense(512, init='glorot_uniform', activation='relu', input_shape=(train_feats.shape[1],)))
-        model.add(Dropout(0.5))
-        model.add(Dense(128, init='glorot_uniform', activation='relu'))
-        model.add(Dropout(0.5))
-        model.add(Dense(20, activation='softmax'))
-        model.compile(loss='categorical_crossentropy', optimizer='adadelta')
+        model = load_model()
 
         model_name = 'model' + str(ens) + '.hdf5'
         model.load_weights(model_name)            
