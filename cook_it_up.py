@@ -1,7 +1,7 @@
 '''
 Author         : Oguzhan Gencoglu
 Contact        : oguzhan.gencoglu@topdatascience.com, oguzhan.gencoglu@tut.fi
-Description    : 21st Place (out of 1416) Submission for Kaggle What's Cooking Competition
+Description    : 17th Place out of 1388 teams (top 2%) Submission for Kaggle What's Cooking Competition
 '''
 
 from __future__ import absolute_import
@@ -162,7 +162,8 @@ def load_model():
     # load neural net model architectiure
     
     mdl = Sequential()
-    mdl.add(Dense(512, init='glorot_uniform', activation='relu', input_shape=(train_feats.shape[1],)))
+    mdl.add(Dense(512, init='glorot_uniform', activation='relu', 
+                                        input_shape=(train_feats.shape[1],)))
     mdl.add(Dropout(0.5))
     mdl.add(Dense(128, init='glorot_uniform', activation='relu'))
     mdl.add(Dropout(0.5))
@@ -216,7 +217,8 @@ if __name__ == '__main__':
         if os.path.isfile(model_name):
             model.load_weights(model_name)
             
-        model.fit(train_feats, targets, nb_epoch=2500, batch_size=4096, show_accuracy = True)
+        model.fit(train_feats, targets, nb_epoch=2500, batch_size=4096, 
+                                                        show_accuracy = True)
         model.save_weights(model_name, overwrite=True)
 
     # create submission out of the ensemble
