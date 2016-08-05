@@ -3,9 +3,6 @@
 </p>
 
 <br>
-<br>
-<br>
-<br>
 
 What's Cooking
 =======
