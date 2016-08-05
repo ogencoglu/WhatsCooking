@@ -1,4 +1,11 @@
-<a href="url"><img src="https://github.com/ogencoglu/WhatsCooking/blob/master/wc.png" align="left"  width="200" ></a>
+<p align="center">
+<img src="https://github.com/ogencoglu/WhatsCooking/blob/master/wc.png" width="200" ></a>
+</p>
+
+<br>
+<br>
+<br>
+<br>
 
 What's Cooking
 =======
